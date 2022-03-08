@@ -27,7 +27,7 @@ They need a `container` and resources to live and grow.
 
 The DNA (Dockerfile) are the instructions that create the seed (image)
 
-# How did I get here?
+## How did I get here?
 - [Cloud Native Bootcamp](https://cloudnative101.dev)
   - `git clone https://github.com/ibm-cloud-architecture/learning-cloudnative-101.git`
 - [Docker Essentials](https://cognitiveclass.ai/courses/docker-essentials/)
@@ -45,3 +45,27 @@ The DNA (Dockerfile) are the instructions that create the seed (image)
 - Contributed to [IBM Cloud Garage Tekton Pipelines](https://github.com/client-engineering-devops/ibm-garage-tekton-tasks/tree/model-pipeline)
 - Building this training material
   - focusing on how I might have learned containers faster 
+
+## What images do I plan on showing?
+- https://quay.io/repository/j0hnniewa1ker/ceevee
+- https://hub.docker.com/r/gitbucket/gitbucket
+- https://hub.docker.com/r/sonatype/nexus3
+- https://hub.docker.com/_/alpine
+- https://hub.docker.com/_/nginx
+- https://hub.docker.com/_/alpine
+- https://hub.docker.com/_/node
+- https://quay.io/repository/j0hnniewa1ker/oc-pwsh
+- https://quay.io/repository/ibmgaragecloud/ibmcloud-dev
+
+### Ross's Helloworld_Fortran_rk
+- https://github.ibm.com/TechGarageCode/Helloworld_Fortran_rk
+
+### [Modern Fortran](https://learning.oreilly.com/library/view/modern-fortran/9781617295287/)
+- https://github.com/modern-fortran/modern-fortran-docker.git
+
+
+### need to investigate these
+- https://hub.docker.com/r/ibmcom/xlf-ce
+- https://hub.docker.com/r/coredns/coredns
+- https://hub.docker.com/r/dreamcat4/pxe
+
