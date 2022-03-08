@@ -48,9 +48,9 @@ The DNA (Dockerfile) are the instructions that create the seed (image)
   - focusing on how I might have learned containers faster 
 
 ## What images do I plan on showing?
-Image | Info  | Description
+Image | Demo | Description
 ----- | ----- | ----- 
-[ceevee](https://quay.io/repository/j0hnniewa1ker/ceevee) | [ceevee.md](ceevee.md) | Introduction
+[ceevee](https://quay.io/repository/j0hnniewa1ker/ceevee) | [ceevee.md](ceevee.md) | My version of Hello
 [nexus3](https://hub.docker.com/r/sonatype/nexus3) |
 [gitbucket](https://hub.docker.com/r/gitbucket/gitbucket) |
 [alpine](https://hub.docker.com/_/alpine) |
