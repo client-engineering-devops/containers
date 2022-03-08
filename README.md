@@ -15,6 +15,7 @@ sudo yum module install -y container-tools:rhel8
 ```
 podman run --name ceevee --rm -d -p 8083:80 quay.io/j0hnniewa1ker/ceevee
 ```
+open http://localhost:8083 in a browser
 ## Concept
 
 A way to personalize the concepts of containers. This came in the mail: [Johnnie's Selected Seeds](https://www.johnnyseeds.com/on/demandware.static/-/Library-Sites-JSSSharedLibrary/default/dw293a81b5/assets/information/2022-digital-master-catalog.pdf) catalog
@@ -47,15 +48,17 @@ The DNA (Dockerfile) are the instructions that create the seed (image)
   - focusing on how I might have learned containers faster 
 
 ## What images do I plan on showing?
-- https://quay.io/repository/j0hnniewa1ker/ceevee
-- https://hub.docker.com/r/gitbucket/gitbucket
-- https://hub.docker.com/r/sonatype/nexus3
-- https://hub.docker.com/_/alpine
-- https://hub.docker.com/_/nginx
-- https://hub.docker.com/_/alpine
-- https://hub.docker.com/_/node
-- https://quay.io/repository/j0hnniewa1ker/oc-pwsh
-- https://quay.io/repository/ibmgaragecloud/ibmcloud-dev
+Image | Demo | Description
+----- | ----- | ----- 
+[ceevee](https://quay.io/repository/j0hnniewa1ker/ceevee) | [ceevee.md](ceevee.md) | My version of Hello
+[nexus3](https://hub.docker.com/r/sonatype/nexus3) |
+[gitbucket](https://hub.docker.com/r/gitbucket/gitbucket) |
+[alpine](https://hub.docker.com/_/alpine) |
+[nginx](https://hub.docker.com/_/nginx) |
+[alpine](https://hub.docker.com/_/alpine) |
+[node](https://hub.docker.com/_/node) |
+[oc-pwsh](https://quay.io/repository/j0hnniewa1ker/oc-pwsh) |
+[ibmcloud-dev](https://quay.io/repository/ibmgaragecloud/ibmcloud-dev) |
 
 ### Ross's Helloworld_Fortran_rk
 - https://github.ibm.com/TechGarageCode/Helloworld_Fortran_rk
