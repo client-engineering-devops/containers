@@ -5,3 +5,5 @@ Introduction and Concept
 How did I get here?
 ## Mon Mar  7 18:44:26 PST 2022
 What images do I plan on showing?
+## Tue Mar  8 11:00:24 PST 2022
+What does the ceevee command do?
