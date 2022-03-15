@@ -4,119 +4,119 @@
 - [image](https://quay.io/repository/j0hnniewa1ker/ceevee)
 
 ### Commands this demo covers
-help | docker docs
+help | podman docs
 ---- | ----
-`docker --help` | https://docs.docker.com/engine/reference/commandline/cli/
-`docker run --help` | https://docs.docker.com/engine/reference/run/
-`docker ps --help` | https://docs.docker.com/engine/reference/commandline/ps/
-`docker stats --help` | https://docs.docker.com/engine/reference/commandline/stats/
-`docker stop --help` | https://docs.docker.com/engine/reference/commandline/stop/
-`docker start --help` | https://docs.docker.com/engine/reference/commandline/start/
-`docker rm --help` | https://docs.docker.com/engine/reference/commandline/rm/
+`podman --help` | https://docs.docker.com/engine/reference/commandline/cli/
+`podman run --help` | https://docs.docker.com/engine/reference/run/
+`podman ps --help` | https://docs.docker.com/engine/reference/commandline/ps/
+`podman stats --help` | https://docs.docker.com/engine/reference/commandline/stats/
+`podman stop --help` | https://docs.docker.com/engine/reference/commandline/stop/
+`podman start --help` | https://docs.docker.com/engine/reference/commandline/start/
+`podman rm --help` | https://docs.docker.com/engine/reference/commandline/rm/
 
 ### Run a command in a new container
 Did you run this in the [README](README.md)? Try it again.
 
-`docker run --name ceevee --rm -d -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
+`podman run --name ceevee --rm -d -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
 ```
-docker: Error response from daemon: Conflict. The container name "/ceevee" is already in use by container "1aaf5fb8664ae7f16201ef10ecfa7e4f17c4a0c31fa658cbb283731c0a02b595". You have to remove (or rename) that container to be able to reuse that name.
-See 'docker run --help'.
+podman: Error response from daemon: Conflict. The container name "/ceevee" is already in use by container "1aaf5fb8664ae7f16201ef10ecfa7e4f17c4a0c31fa658cbb283731c0a02b595". You have to remove (or rename) that container to be able to reuse that name.
+See 'podman run --help'.
 ```
 If it wasn't already running, run it again.
 
-`docker run --help`
+`podman run --help`
 
 ### List containers
-`docker ps`
+`podman ps`
 ```
 CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS         PORTS                                   NAMES
-23cc2befcc92   quay.io/j0hnniewa1ker/ceevee   "/docker-entrypoint.…"   15 minutes ago   Up 15 minutes   0.0.0.0:8083->80/tcp, :::8083->80/tcp   ceevee
+23cc2befcc92   quay.io/j0hnniewa1ker/ceevee   "/podman-entrypoint.…"   15 minutes ago   Up 15 minutes   0.0.0.0:8083->80/tcp, :::8083->80/tcp   ceevee
 ```
-`docker ps --help`
+`podman ps --help`
 ### Display a live stream of container(s) resource usage statistics
-`docker stats`
+`podman stats`
 ```
 CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O         PIDS
 1aaf5fb8664a   ceevee    0.00%     4.094MiB / 3.842GiB   0.10%     29.6kB / 317kB   12.3kB / 8.19kB   5
 ```
 ctrl-c to quit
 
-`docker stats --help`
+`podman stats --help`
 ### Stop one or more running containers
-`docker stop ceevee`
+`podman stop ceevee`
 
-`docker stop --help`
+`podman stop --help`
 
 ### Run ceevee without the --rm (Automatically remove the container when it exits)
-`docker run --name ceevee -d -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
+`podman run --name ceevee -d -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
 
-`docker stop ceevee`
+`podman stop ceevee`
 
-`docker run --name ceevee -d -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
+`podman run --name ceevee -d -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
 ```
-docker: Error response from daemon: Conflict. The container name "/ceevee" is already in use by container "2ad61fe5424d1232055fbdacdfaa4ce29dfa06530002baf5668f76648da5bb28". You have to remove (or rename) that container to be able to reuse that name.
-See 'docker run --help'.
+podman: Error response from daemon: Conflict. The container name "/ceevee" is already in use by container "2ad61fe5424d1232055fbdacdfaa4ce29dfa06530002baf5668f76648da5bb28". You have to remove (or rename) that container to be able to reuse that name.
+See 'podman run --help'.
 ```
 ### Show all containers (default shows just running)
-`docker ps -a`
+`podman ps -a`
 ```
 CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS                     PORTS     NAMES
-2ad61fe5424d   quay.io/j0hnniewa1ker/ceevee   "/docker-entrypoint.…"   7 minutes ago   Exited (0) 7 minutes ago             ceevee
+2ad61fe5424d   quay.io/j0hnniewa1ker/ceevee   "/podman-entrypoint.…"   7 minutes ago   Exited (0) 7 minutes ago             ceevee
 ```
-`docker start ceevee`
+`podman start ceevee`
 ```
 ceevee
 ```
-`docker start --help`
+`podman start --help`
 
-`docker ps -a`
+`podman ps -a`
 ```
 CONTAINER ID   IMAGE                          COMMAND                  CREATED          STATUS                  PORTS                                   NAMES
-2ad61fe5424d   quay.io/j0hnniewa1ker/ceevee   "/docker-entrypoint.…"   10 minutes ago   Up About a minute       0.0.0.0:8083->80/tcp, :::8083->80/tcp   ceevee
+2ad61fe5424d   quay.io/j0hnniewa1ker/ceevee   "/podman-entrypoint.…"   10 minutes ago   Up About a minute       0.0.0.0:8083->80/tcp, :::8083->80/tcp   ceevee
 ```
 ### Remove one or more containers
-`docker rm ceevee`
+`podman rm ceevee`
 ```
 Error response from daemon: You cannot remove a running container 2ad61fe5424d1232055fbdacdfaa4ce29dfa06530002baf5668f76648da5bb28. Stop the container before attempting removal or force remove
 ```
-`docker rm --help`
+`podman rm --help`
 
-`docker rm -f ceevee` or `docker stop ceevee && docker rm ceevee`
+`podman rm -f ceevee` or `podman stop ceevee && podman rm ceevee`
 ```
 ceevee
 ```
-`docker ps -a`
+`podman ps -a`
 ```      
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
 ### Run ceevee without the `--name ceevee` (Assign a name to the container)
-`docker run -d -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
+`podman run -d -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
 ``` 
 2c166fd4e5c86717e518aaf2f73ade5e79437976d01aa913cabaf06d9cf2a6aa
 ```
-`docker ps`
+`podman ps`
 ```
 CONTAINER ID   IMAGE                          COMMAND                  CREATED          STATUS          PORTS                                   NAMES
-2c166fd4e5c8   quay.io/j0hnniewa1ker/ceevee   "/docker-entrypoint.…"   33 seconds ago   Up 32 seconds   0.0.0.0:8083->80/tcp, :::8083->80/tcp   xenodochial_nightingale
+2c166fd4e5c8   quay.io/j0hnniewa1ker/ceevee   "/podman-entrypoint.…"   33 seconds ago   Up 32 seconds   0.0.0.0:8083->80/tcp, :::8083->80/tcp   xenodochial_nightingale
 ```
 without the --name a container will get a random name like `xenodochial_nightingale`. you can run commands using it or the ID `2c166fd4e5c8`
 
-`docker rm -f 2c166fd4e5c8`
+`podman rm -f 2c166fd4e5c8`
 ```
 2c166fd4e5c8
 ```
 ### Run ceevee without the `-d` (Run container in background and print container ID)
-`docker run --name ceevee -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
+`podman run --name ceevee -p 8083:80 quay.io/j0hnniewa1ker/ceevee`
 ``` 
-/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+/podman-entrypoint.sh: /podman-entrypoint.d/ is not empty, will attempt to perform configuration
+/podman-entrypoint.sh: Looking for shell scripts in /podman-entrypoint.d/
+/podman-entrypoint.sh: Launching /podman-entrypoint.d/10-listen-on-ipv6-by-default.sh
 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
-/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
-/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
-/docker-entrypoint.sh: Configuration complete; ready for start up
+/podman-entrypoint.sh: Launching /podman-entrypoint.d/20-envsubst-on-templates.sh
+/podman-entrypoint.sh: Launching /podman-entrypoint.d/30-tune-worker-processes.sh
+/podman-entrypoint.sh: Configuration complete; ready for start up
 2022/03/08 04:54:19 [notice] 1#1: using the "epoll" event method
 2022/03/08 04:54:19 [notice] 1#1: nginx/1.21.6
 2022/03/08 04:54:19 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
